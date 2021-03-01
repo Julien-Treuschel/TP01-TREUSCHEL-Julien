@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <head>
-
+    <title>TP 1</title>
+    <meta charset="utf-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
+
 <body>
-	<div id="main">
-		<h1>Hey !</h1>
-	</div>
+    <div class="main">
+		<h1>TP 1</h1>
+    </div>
+    <form class="row g-3">
+        <div class="col-md-3">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="col-md-3">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="prenom" required>
+        </div>
+        <div class="col-md-3">
+          <label for="email" class="form-label">Email</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+        </div>
+        <div class="col-md-3">
+            <label for="tel" class="form-label">Téléphone</label>
+            <input type="tel" class="form-control" id="tel" required>
+        </div>
+        <div class="col-md-3">
+            <label for="adresse" class="form-label">Adresse</label>
+            <input type="text" class="form-control" id="adresse" required>
+        </div> 
+        <div class="col-md-3">
+          <label for="ville" class="form-label">Ville</label>
+          <input type="text" class="form-control" id="ville" required>
+        </div>        
+        <div class="col-md-2">
+          <label for="code-postal" class="form-label">Code postal</label>
+          <input type="text" class="form-control" id="code-postal" required>
+        </div>
+        <div class="col-md-3">
+            <label for="civilite" class="form-label">Civilité</label>
+            <select class="form-select" id="civilite" required>
+                <option value="">Veuillez choisir une option</option>
+                <option>M</option>
+                <option>Mme</option>
+            </select>
+        </div>         
+        <div class="col-md-3">
+            <label for="login" class="form-label">Login</label>
+            <input type="text" class="form-control" id="login" required>
+        </div>   
+        <div class="col-md-3">
+            <label for="mdp" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="mdp" required>
+        </div> 
+        <div class="col-md-3">
+            <label for="mdp-confirmation" class="form-label">Confirmation du mot de passe</label>
+            <input type="password" class="form-control" id="mdp-confirmation" required>
+        </div>   
+        <div class="col-12">
+          <button onclick="VerifMdp();" class="btn btn-primary" type="submit">Envoyer</button>
+        </div>
+      </form>
+
+<script>
+    function VerifMdp()
+{
+    var mdp1 = document.getElementById('mdp').value;
+    var mdp2 = document.getElementById('mdp-confirmation').value;
+
+    if(mdp1 === mdp2)
+    {
+
+    }
+    else return window.alert("Les mots de passe ne correpondent pas !");
+};
+</script>     
+
 </body>
 
 </html>
